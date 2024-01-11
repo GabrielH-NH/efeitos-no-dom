@@ -8,8 +8,9 @@ function initTabNav() {
     function activeTab(index) {
       tabcontent.forEach((section) => {
         section.classList.remove('ativo')
-      })
-      tabcontent[index].classList.add('ativo')
+      });
+      const direcao = tabcontent[index].dataset.anime;
+      tabcontent[index].classList.add('ativo', direcao)
     }
 
     tabmenu.forEach((itemMenu, index) => {
